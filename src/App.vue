@@ -46,8 +46,10 @@
       baselayers: new LayerGroup({ name: 'baselayer' }),
       overlays: new LayerGroup({ name: 'overlay' }),
       controls: defaultControls(),
-      interactions: defaultInteractions()
     }),
+    created(){
+      this.interactions = new Proxy(defaultInteractions(), {});
+    },
     mounted() {
       this.controls.extend([new FullScreen({ source: document.querySelector(this.fullscreenElement) })]);
       this.interactions.extend([new DragRotateAndZoom()]);

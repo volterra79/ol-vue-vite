@@ -57,7 +57,7 @@
       clear() {
         this.toggleMapCursor(false);
         this.selected = '';
-        this.hasActiveLayers = false
+        this.hasActiveLayers = false;
         this.vector.getSource().clear();
       }
     }
