@@ -4,11 +4,17 @@
       <LayersControl
         :mapTypeId="mapTypeId"
         :mapTypes="mapTypes"
-        :layerGroup="baselayers"></LayersControl>
-      <DrawingControl
-        :allowedFeatures="drawingFeatures"
-        :layerGroup="overlays"
-        :interactions="interactions"></DrawingControl>
+        :layerGroup="baselayers">
+      </LayersControl>
+      <WpsControl
+        :mapTypeId="mapTypeId"
+        :mapTypes="mapTypes"
+        :layerGroup="baselayers">
+      </WpsControl>
+<!--      <DrawingControl-->
+<!--        :allowedFeatures="drawingFeatures"-->
+<!--        :layerGroup="overlays"-->
+<!--        :interactions="interactions"></DrawingControl>-->
     </aside>
     <MapContainer
       :center="center"
@@ -26,8 +32,8 @@
 
   import MapContainer from '@/components/MapContainer.vue'
   import LayersControl from '@/components/LayersControl.vue'
+  import WpsControl from '@/components/WpsControl.vue'
   import DrawingControl from '@/components/DrawingControl.vue'
-
   import { FullScreen, defaults as defaultControls } from 'ol/control'
   import { DragRotateAndZoom, defaults as defaultInteractions } from 'ol/interaction'
   import LayerGroup from 'ol/layer/Group'
@@ -37,6 +43,7 @@
   export default {
     name: 'App',
     components: {
+      WpsControl,
       MapContainer,
       LayersControl,
       DrawingControl,
