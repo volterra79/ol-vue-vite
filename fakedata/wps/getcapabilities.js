@@ -1,0 +1,154 @@
+export default `<?xml version="1.0" encoding="utf-8"?>
+<wps:Capabilities service="WPS" version="1.0.0" xml:lang="en-CA" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsGetCapabilities_response.xsd" updateSequence="1">
+	<ows:ServiceIdentification>
+		<ows:Title>PyWPS Server</ows:Title>
+		<ows:Abstract>See http://pywps.wald.intevation.org and http://www.opengeospatial.org/standards/wps</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>GRASS</ows:Keyword>
+			<ows:Keyword>GIS</ows:Keyword>
+			<ows:Keyword>WPS</ows:Keyword>
+		</ows:Keywords>
+		<ows:ServiceType>WPS</ows:ServiceType>
+		<ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+		<ows:Fees>None</ows:Fees>
+		<ows:AccessConstraints>none</ows:AccessConstraints>
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider>
+		<ows:ProviderName>Your Company Name</ows:ProviderName>
+		<ows:ProviderSite xlink:href="http://foo.bar"/>
+		<ows:ServiceContact>
+			<ows:IndividualName>Your Name</ows:IndividualName>
+			<ows:PositionName>Your Position</ows:PositionName>
+			<ows:ContactInfo>
+				<ows:Address>
+					<ows:DeliveryPoint>Street</ows:DeliveryPoint>
+					<ows:City>City</ows:City>
+					<ows:PostalCode>000 00</ows:PostalCode>
+					<ows:Country>eu</ows:Country>
+					<ows:ElectronicMailAddress>login@server.org</ows:ElectronicMailAddress>
+				</ows:Address>
+				<ows:OnlineResource xlink:href="http://foo.bar"/>
+				<ows:HoursOfService>0:00-24:00</ows:HoursOfService>
+				<ows:ContactInstructions>none</ows:ContactInstructions>
+			</ows:ContactInfo>
+			<ows:Role>Your role</ows:Role>
+		</ows:ServiceContact>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata>
+		<ows:Operation name="GetCapabilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://130.192.28.30/cgi-bin/wps?"/>
+					<ows:Post xlink:href="http://130.192.28.30/cgi-bin/wps"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="DescribeProcess">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://130.192.28.30/cgi-bin/wps?"/>
+					<ows:Post xlink:href="http://130.192.28.30/cgi-bin/wps"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="Execute">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://130.192.28.30/cgi-bin/wps?"/>
+					<ows:Post xlink:href="http://130.192.28.30/cgi-bin/wps"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<wps:ProcessOfferings>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>Renerfor_CDP</ows:Identifier>
+			<ows:Title>Renerfor_CDP</ows:Title>
+			<ows:Abstract>RENERFOR CDP</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>Renerfor_CDP_Report</ows:Identifier>
+			<ows:Title>Renerfor_CDP_Report</ows:Title>
+			<ows:Abstract>RENERFOR CDP Report</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>Renerfor_CDP_Report_browser</ows:Identifier>
+			<ows:Title>Renerfor_CDP_Report_browser</ows:Title>
+			<ows:Abstract>RENERFOR CDP Report</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>CPP_Rosso_new</ows:Identifier>
+			<ows:Title>CPP_Rosso_new</ows:Title>
+			<ows:Abstract>La procedura restituisce, inseriti durata e tempo di ritorno: h(d,T), KT ottenuto dalla media dei parametri e dalla media dei KT calcolati per ogni cella del bacino + tempo di processamento</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>CPP_PAI_d_T</ows:Identifier>
+			<ows:Title>Calcolo del quantile e grafico delle curve di probabilita pluviometrica secondo i dati del PAI</ows:Title>
+			<ows:Abstract>Calcolo del quantile e grafico delle curve di probabilita pluviometrica secondo i dati del PAI</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>CPP_PAI_d_T_shape</ows:Identifier>
+			<ows:Title>Calcolo del quantile e grafico delle curve di probabilita pluviometrica secondo i dati del PAI</ows:Title>
+			<ows:Abstract>Calcolo del quantile e grafico delle curve di probabilita pluviometrica secondo i dati del PAI</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>Renerfor_delimitazione</ows:Identifier>
+			<ows:Title>Renerfor_delimitazione</ows:Title>
+			<ows:Abstract>RENERFOR delimitazione di bacino</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>Renerfor_descrittori</ows:Identifier>
+			<ows:Title>Renerfor_descrittori</ows:Title>
+			<ows:Abstract>RENERFOR descrittori del bacino</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>CPP_PAI_shape</ows:Identifier>
+			<ows:Title>Ricostruzione delle curve di probabilita pluviometrica secondo i dati del PAI</ows:Title>
+			<ows:Abstract>Ricostruzione delle curve di probabilita pluviometrica secondo i dati del PAI (Piano di Assetto Idrogeologico del Bacino del Po, 2001)</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>shapeout</ows:Identifier>
+			<ows:Title>shapeout</ows:Title>
+			<ows:Abstract>RENERFOR delimitazione di bacino</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>Renerfor_delimitazione_prova</ows:Identifier>
+			<ows:Title>Renerfor_delimitazione_prova</ows:Title>
+			<ows:Abstract>RENERFOR delimitazione di bacino</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>test_KT_Strada</ows:Identifier>
+			<ows:Title>test_KT_Strada</ows:Title>
+			<ows:Abstract>test_KT_Strada</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>test_KT_Rosso</ows:Identifier>
+			<ows:Title>test_KT_Rosso</ows:Title>
+			<ows:Abstract>Inserendo uno shapefile e T, restituisce il raster del KT</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>CPP_Rosso</ows:Identifier>
+			<ows:Title>CPP_Rosso</ows:Title>
+			<ows:Abstract>La procedura restituisce, inseriti durata e tempo di ritorno: h(d,T), KT ottenuto dalla media dei parametri e dalla media dei KT calcolati per ogni cella del bacino + tempo di processamento</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>outputshape</ows:Identifier>
+			<ows:Title>outputshape</ows:Title>
+			<ows:Abstract>outputshape</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>test9_Browser</ows:Identifier>
+			<ows:Title>test9_Browser</ows:Title>
+			<ows:Abstract>test 9_Browser: plugin PAI + grafico svg  (x,y=396577,4991668)</ows:Abstract>
+		</wps:Process>
+	</wps:ProcessOfferings>
+	<wps:Languages>
+		<wps:Default>
+			<ows:Language>en-CA</ows:Language>
+		</wps:Default>
+		<wps:Supported>
+			<ows:Language>en-CA</ows:Language>
+		</wps:Supported>
+	</wps:Languages>
+	<wps:WSDL xlink:href="http://130.192.28.30/cgi-bin/wps?WSDL"/>
+</wps:Capabilities>`

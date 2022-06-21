@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wps:ProcessDescriptions xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd" service="WPS" version="1.0.0" xml:lang="en-CA">
+    <ProcessDescription wps:processVersion="0.1" storeSupported="true" statusSupported="true">
+        <ows:Identifier>CPP_Rosso_new</ows:Identifier>
+        <ows:Title>CPP_Rosso_new</ows:Title>
+        <ows:Abstract>La procedura restituisce, inseriti durata e tempo di ritorno: h(d,T), KT ottenuto dalla media dei parametri e dalla media dei KT calcolati per ogni cella del bacino + tempo di processamento</ows:Abstract>
+        <DataInputs>
+            <Input minOccurs="0" maxOccurs="1">
+                <ows:Identifier>Shapefile</ows:Identifier>
+                <ows:Title>Inserire lo shapefile dell'area di interesse: </ows:Title>
+                <ComplexData>
+                    <Default>
+                        <Format>
+                            <MimeType>text/xml</MimeType>
+                            <Encoding>utf-8</Encoding>
+                            <Schema>http://schemas.opengis.net/gml/3.2.1/gml.xsd</Schema>
+                        </Format>
+                    </Default>
+                    <Supported>
+                        <Format>
+                            <MimeType>text/xml</MimeType>
+                            <Encoding>utf-8</Encoding>
+                            <Schema>http://schemas.opengis.net/gml/3.2.1/gml.xsd</Schema>
+                        </Format>
+                    </Supported>
+                </ComplexData>
+            </Input>
+            <Input minOccurs="0" maxOccurs="1">
+                <ows:Identifier>Inputx</ows:Identifier>
+                <ows:Title>Coordinata est (EPSG: 3003)</ows:Title>
+                <LiteralData>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#string">string</ows:DataType>
+                    <ows:AnyValue />
+                </LiteralData>
+            </Input>
+            <Input minOccurs="0" maxOccurs="1">
+                <ows:Identifier>Inputy</ows:Identifier>
+                <ows:Title>Coordinata nord (EPSG: 3003)</ows:Title>
+                <LiteralData>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#string">string</ows:DataType>
+                    <ows:AnyValue />
+                </LiteralData>
+            </Input>
+            <Input minOccurs="1" maxOccurs="1">
+                <ows:Identifier>InputT</ows:Identifier>
+                <ows:Title>Inserire il tempo di ritorno (anni)</ows:Title>
+                <LiteralData>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#string">string</ows:DataType>
+                    <ows:AnyValue />
+                </LiteralData>
+            </Input>
+            <Input minOccurs="1" maxOccurs="1">
+                <ows:Identifier>Inputd</ows:Identifier>
+                <ows:Title>Inserire la durata (ore)</ows:Title>
+                <LiteralData>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#string">string</ows:DataType>
+                    <ows:AnyValue />
+                </LiteralData>
+            </Input>
+        </DataInputs>
+        <ProcessOutputs>
+            <Output>
+                <ows:Identifier>textOut</ows:Identifier>
+                <ows:Title>Valori dei parametri caratteristici utili alla ricostruzione delle CPP</ows:Title>
+                <LiteralOutput>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#string">string</ows:DataType>
+                </LiteralOutput>
+            </Output>
+        </ProcessOutputs>
+    </ProcessDescription>
+</wps:ProcessDescriptions>
