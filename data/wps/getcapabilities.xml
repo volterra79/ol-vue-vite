@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PyWPS 4.2.2 -->
+<wps:Capabilities service="WPS" version="1.0.0" xml:lang="en-CA" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 ../wpsGetCapabilities_response.xsd" updateSequence="1">
+	<ows:ServiceIdentification>
+		<ows:Title>PyWPS Demo server</ows:Title>
+		<ows:Abstract>PyWPS testing and development server. Do NOT use this server in production environment. You shall setup PyWPS as WSGI application for production. Please refer documentation for further detials.</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>WPS</ows:Keyword>
+			<ows:Keyword>GRASS</ows:Keyword>
+			<ows:Keyword>PyWPS</ows:Keyword>
+			<ows:Keyword> Demo</ows:Keyword>
+			<ows:Keyword> Dev</ows:Keyword>
+			<ows:Type codeSpace="ISOTC211/19115">theme</ows:Type>
+		</ows:Keywords>
+		<ows:ServiceType>WPS</ows:ServiceType>
+		<ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+		<ows:ServiceTypeVersion>2.0.0</ows:ServiceTypeVersion>
+		<ows:Fees>None</ows:Fees>
+		<ows:AccessConstraints>
+			None
+		</ows:AccessConstraints>
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider>
+		<ows:ProviderName>PyWPS Developement team</ows:ProviderName>
+		<ows:ProviderSite xlink:href="http://pywps.org/&#39;"/>
+		<ows:ServiceContact>
+			<ows:IndividualName>Susanna</ows:IndividualName>
+			<ows:PositionName>Grasso</ows:PositionName>
+			<ows:ContactInfo>
+				<ows:Phone>
+					<ows:Voice></ows:Voice>
+					<ows:Facsimile></ows:Facsimile>
+				</ows:Phone>
+				<ows:Address>
+					<ows:DeliveryPoint></ows:DeliveryPoint>
+					<ows:City>Torino</ows:City>
+					<ows:AdministrativeArea></ows:AdministrativeArea>
+					<ows:PostalCode>000 00</ows:PostalCode>
+					<ows:Country>Italy</ows:Country>
+					<ows:ElectronicMailAddress>susanna.grasso@polito.it</ows:ElectronicMailAddress>
+				</ows:Address>
+			</ows:ContactInfo>
+		</ows:ServiceContact>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata>
+		<ows:Operation name="GetCapabilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="https://wps.idrologia.org"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="DescribeProcess">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="https://wps.idrologia.org"/>
+					<ows:Post xlink:href="https://wps.idrologia.org"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="Execute">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="https://wps.idrologia.org"/>
+					<ows:Post xlink:href="https://wps.idrologia.org"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<wps:ProcessOfferings>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>renerfor_delimitazione</ows:Identifier>
+			<ows:Title>Renerfor delimitazione</ows:Title>
+			<ows:Abstract>RENERFOR - Procedura di delimitazione di bacino</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>renerfor_descrittori_test</ows:Identifier>
+			<ows:Title>renerfor_descrittori_test</ows:Title>
+			<ows:Abstract>Inserimento di uno shapefile in formato GML e ritorno di un link per visualizzazione di un pdf scelto come esempio</ows:Abstract>
+		</wps:Process>
+		<wps:Process wps:processVersion="0.1">
+			<ows:Identifier>return_pdf_metalink</ows:Identifier>
+			<ows:Title>return_pdf_metalink</ows:Title>
+			<ows:Abstract>Inserimento di uno shapefile in formato GML e ritorno di un link per visualizzazione di un pdf scelto come esempio</ows:Abstract>
+		</wps:Process>
+	</wps:ProcessOfferings>
+	<wps:Languages>
+		<wps:Default>
+			<ows:Language>en-US</ows:Language>
+		</wps:Default>
+		<wps:Supported>
+			<ows:Language>lang</ows:Language>
+		</wps:Supported>
+	</wps:Languages>
+</wps:Capabilities>

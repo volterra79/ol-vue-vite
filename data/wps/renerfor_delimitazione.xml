@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PyWPS 4.2.2 -->
+<wps:ProcessDescriptions xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 ../wpsDescribeProcess_response.xsd" service="WPS" version="1.0.0" xml:lang="en-US">
+    <ProcessDescription wps:processVersion="0.1" storeSupported="true" statusSupported="true">
+        <ows:Identifier>renerfor_delimitazione</ows:Identifier>
+        <ows:Title>Renerfor delimitazione</ows:Title>
+        <ows:Abstract>RENERFOR - Procedura di delimitazione di bacino</ows:Abstract>
+        <DataInputs>
+            <Input minOccurs="1" maxOccurs="1">
+                <ows:Identifier>nome_bacino</ows:Identifier>
+                <ows:Title>Nome del bacino</ows:Title>
+                <ows:Abstract>Inserire il nome che si vuole dare al bacino</ows:Abstract>
+                <LiteralData>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#string">string</ows:DataType>
+                </LiteralData>
+            </Input>
+            <Input minOccurs="1" maxOccurs="1">
+                <ows:Identifier>InputX</ows:Identifier>
+                <ows:Title>Coordinata X (32632) della sezione di chiusura</ows:Title>
+                <ows:Abstract>Coordinata X (nel sistema di riferimento WGS-84-UTM32N) della sezione di chiusura del bacino</ows:Abstract>
+                <LiteralData>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#float">float</ows:DataType>
+                </LiteralData>
+            </Input>
+            <Input minOccurs="1" maxOccurs="1">
+                <ows:Identifier>InputY</ows:Identifier>
+                <ows:Title>Coordinata Y (32632) della sezione di chiusura</ows:Title>
+                <ows:Abstract>Coordinata Y (nel sistema di riferimento WGS-84-UTM32N) della sezione di chiusura del bacino</ows:Abstract>
+                <LiteralData>
+                    <ows:DataType ows:reference="http://www.w3.org/TR/xmlschema-2/#float">float</ows:DataType>
+                </LiteralData>
+            </Input>
+        </DataInputs>
+        <ProcessOutputs>
+            <Output>
+                <ows:Identifier>shapefilebacino</ows:Identifier>
+                <ows:Title>Bacino delimitato in formato GML</ows:Title>
+                <ows:Abstract>Vettoriale del bacino delimitato in formato GML</ows:Abstract>
+                <ComplexOutput>
+                    <Default>
+                        <Format>
+                            <MimeType>application/gml+xml</MimeType>
+                        </Format>
+                    </Default>
+                    <Supported>
+                        <Format>
+                            <MimeType>application/gml+xml</MimeType>
+                        </Format>
+                    </Supported>
+                </ComplexOutput>
+            </Output>
+        </ProcessOutputs>
+    </ProcessDescription>
+</wps:ProcessDescriptions>
