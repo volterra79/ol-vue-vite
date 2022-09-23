@@ -41,4 +41,6 @@ npm run test:unit
 ```sh
 npm run build
 npm run test:e2e # or `npm run test:e2e:ci` for headless testing
+
 ```
+This project is tested with BrowserStack.
